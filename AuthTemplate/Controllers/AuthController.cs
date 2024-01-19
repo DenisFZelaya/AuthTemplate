@@ -18,6 +18,7 @@ namespace AuthTemplate.Controllers
     {
         // GET: api/<AuthController>
         [HttpGet]
+        [Authorize(Roles = "SUPER,TEST")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
